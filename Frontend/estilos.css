@@ -1,0 +1,215 @@
+/* Estilos para Cuco's Cafe - Tema café con acentos rosas y estética perruna */
+
+:root {
+    --brown-dark: #4e342e;
+    --brown-medium: #6d4c41;
+    --brown-light: #d7ccc8;
+    --cream: #fff8e1;
+    --pink: #f48fb1;
+    --text-primary: #3e2723;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--cream);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background: var(--brown-medium);
+    color: var(--cream);
+    text-align: center;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Logo centrado con bordes redondeados */
+.logo-placeholder img {
+    border: 5px solid var(--pink);
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    background: var(--brown-dark);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: var(--cream);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background: var(--pink);
+    color: var(--brown-dark);
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section article {
+    background: var(--cream);
+    border: 1px solid var(--brown-light);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Paws decoration */
+section article::before {
+    content: "🐾";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+h2 {
+    color: var(--brown-dark);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--pink);
+    margin-top: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid var(--brown-light);
+}
+
+th, td {
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: var(--brown-light);
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    background: var(--brown-dark);
+    color: var(--cream);
+    text-align: center;
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: var(--pink);
+    color: var(--brown-dark);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background: var(--brown-dark);
+    color: var(--cream);
+}
+
+fieldset {
+    border: 1px solid var(--brown-light);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: var(--brown-dark);
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--brown-light);
+    border-radius: 4px;
+    margin-top: 0.2rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--pink);
+}
+
+/* link color general */
+a {
+    color: var(--brown-dark);
+}
+a:hover {
+    color: var(--pink);
+}
