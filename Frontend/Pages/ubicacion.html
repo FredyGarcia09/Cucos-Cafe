@@ -7,163 +7,119 @@
     <title>Ubicación - Cuco's Cafe</title>
 </head>
 <body>
-    <header>
-        <div class="logo-placeholder">
-            <img src="../Pictures/Logotipo.png" alt="Logo de Cuco's Cafe - Perrita Chihuahua" width="400" height="300">
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <h1>Cuco's Cafe</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="ubicacion.html" class="active">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>🐕 Cuco's Cafe - ¿Dónde nos ubicas? 🗺️</h1>
-        <p><em>"Muy fácil de encontrar, Cuco te espera"</em></p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="ubicacion.html">Ubicación</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="page-header">
+        <h1>🗺️ ¿Dónde nos ubicas?</h1>
+        <p>"Muy fácil de encontrar, Cuco te espera"</p>
+    </div>
 
     <main>
-        <section>
+        <section class="grid-container" style="grid-template-columns: 1fr 1fr; align-items: start;">
             <article>
-                <h2>📍 Nuestra Ubicación</h2>
-                <p>
-                    Nos encontramos ubicados dentro de las instalaciones del 
-                    <strong>Instituto Tecnológico Superior de Uriangato (ITSUR)</strong>,
-                    en la ciudad de Uriangato, Guanajuato, México.
-                </p>
-                <h3>Dirección Completa</h3>
-                <p>
-                    <strong>ITSUR - Cuco's Cafe</strong><br>
+                <h2>📍 Nuestra Dirección</h2>
+                <div class="card" style="text-align: left;">
+                    <p>Nos encontramos dentro de las instalaciones del <strong>ITSUR</strong>.</p>
+                    <br>
+                    <p><strong>Dirección:</strong><br>
                     Carretera a Pénjamo km 1.5<br>
                     Uriangato, Guanajuato 36980<br>
-                    México
-                </p>
+                    México</p>
+                </div>
+                
+                <h3 style="margin-top: 2rem; color: var(--coffee);">🚗 Cómo Llegar</h3>
+                <ol class="styled-list">
+                    <li>Dirígete hacia la Carretera a Pénjamo</li>
+                    <li>Entra al ITSUR (km 1.5)</li>
+                    <li>Estaciona en visitantes</li>
+                    <li>¡Sigue el olor a café!</li>
+                </ol>
+            </article>
+
+            <article>
+                <h2>Mapa</h2>
+                <div style="border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-card);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3744.1!2d-101.1!3d20.1!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA5JzAwLjAiTiAxMDHCsDA5JzAwLjAiVw!5e0!3m2!1ses!2smx!4v1600000000000!5m2!1ses!2smx"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
             </article>
         </section>
 
         <section>
-            <h2>🗺️ Mapa de Ubicación</h2>
-            <p>Puedes ubicarnos fácilmente con este mapa interactivo:</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4454.58352074295!2d-101.1514184888024!3d20.140583410861623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cfab60ca5e1d3%3A0x60ae1a745fc6bf18!2sITSUR%20Instituto%20Tecnol%C3%B3gico%20Superior%20del%20Sur%20de%20Guanajuato!5e0!3m2!1ses-419!2smx!4v1771378135531!5m2!1ses-419!2smx"
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <p><small>*Si no ves el mapa, busca "ITSUR Uriangato" directamente en Google Maps</small></p>
+            <h2>⏰ Horarios Detallados</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Apertura</th>
+                            <th>Cierre</th>
+                            <th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes - Jueves</td>
+                            <td>07:00 AM</td>
+                            <td>08:00 PM</td>
+                            <td>Abierto normalmente</td>
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td>07:00 AM</td>
+                            <td>08:00 PM</td>
+                            <td><strong>¡Promoción Muffin Gratis!</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>08:00 AM</td>
+                            <td>06:00 PM</td>
+                            <td>Horario reducido</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>09:00 AM</td>
+                            <td>05:00 PM</td>
+                            <td>Descanso relativo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
-
-        <section>
-            <h2>⏰ Horarios de Atención Detallados</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Día</th>
-                        <th>Apertura</th>
-                        <th>Cierre</th>
-                        <th>Notas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lunes</td>
-                        <td>07:00 AM</td>
-                        <td>08:00 PM</td>
-                        <td>Abierto normalmente</td>
-                    </tr>
-                    <tr>
-                        <td>Martes</td>
-                        <td>07:00 AM</td>
-                        <td>08:00 PM</td>
-                        <td>Abierto normalmente</td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>07:00 AM</td>
-                        <td>08:00 PM</td>
-                        <td>Día especial del smoothie 15% OFF</td>
-                    </tr>
-                    <tr>
-                        <td>Jueves</td>
-                        <td>07:00 AM</td>
-                        <td>08:00 PM</td>
-                        <td>Abierto normalmente</td>
-                    </tr>
-                    <tr>
-                        <td>Viernes</td>
-                        <td>07:00 AM</td>
-                        <td>08:00 PM</td>
-                        <td>Promoción muffin gratis</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>08:00 AM</td>
-                        <td>06:00 PM</td>
-                        <td>Horario reducido</td>
-                    </tr>
-                    <tr>
-                        <td>Domingo</td>
-                        <td>09:00 AM</td>
-                        <td>05:00 PM</td>
-                        <td>Domingo de descanso relativo</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>📞 Formas de Contacto</h2>
-            <ul>
-                <li><strong>Teléfono:</strong> (445) 123-4123</li>
-                <li><strong>Email:</strong> info@cucoscafe.com</li>
-                <li><strong>WhatsApp:</strong> (445) 123-4123</li>
-                <li><strong>Facebook:</strong> /CucosCafeITSUR</li>
-                <li><strong>Instagram:</strong> @CucosCafeITSUR</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>📋 Servicios Disponibles en la Ubicación</h2>
-            <ol>
-                <li>Atención presencial en mostrador</li>
-                <li>Mesas para estudiar y trabajar</li>
-                <li>Wi-Fi de alta velocidad (contraseña en mostrador)</li>
-                <li>Enchufes para cargar dispositivos (disponibles en mesas)</li>
-                <li>Baños limpios y accesibles</li>
-                <li>Estacionamiento para estudiantes y empleados</li>
-                <li>Área de descanso y socialización</li>
-                <li>Ambiente tranquilo y estudiante-friendly (Cuco-friendly también 🐕)</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>🚗 Cómo Llegar</h2>
-            <p>
-                <strong>Si vienes del centro de Uriangato:</strong>
-            </p>
-            <ol>
-                <li>Dirígete hacia la Carretera a Pénjamo</li>
-                <li>Continúa por aproximadamente 1.5 km</li>
-                <li>Busca las instalaciones del ITSUR a tu derecha</li>
-                <li>Estaciona en el área designada para visitantes</li>
-                <li>¡Cuco te estará esperando en la puerta! 🐕</li>
-            </ol>
-        </section>
-
     </main>
 
     <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contacto</h3>
+                <p>📍 ITSUR, Uriangato, Guanajuato</p>
+                <p>✉️ info@cucoscafe.com</p>
+            </div>
+        </div>
         <hr>
-        <h3>Contacto</h3>
-        <p>📍 <strong>Ubicación:</strong> Instituto Tecnológico Superior de Uriangato (ITSUR), Uriangato, Guanajuato</p>
-        <p>📞 <strong>Teléfono:</strong> (445) 123-4123</p>
-        <p>✉️ <strong>Email:</strong> info@cucoscafe.com</p>
-        <p><small>© 2026 Cuco's Cafe - Todos los derechos reservados | Hecho con ❤️ y patitas de Cuco 🐕</small></p>
+        <p style="text-align: center;">© 2026 Cuco's Cafe</p>
     </footer>
 
 </body>

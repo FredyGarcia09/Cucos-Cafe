@@ -7,190 +7,120 @@
     <title>Contacto - Cuco's Cafe</title>
 </head>
 <body>
-    <header>
-        <div class="logo-placeholder">
-            <img src="../Pictures/Logotipo.png" alt="Logo de Cuco's Cafe - Perrita Chihuahua" width="400" height="300">
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <h1>Cuco's Cafe</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>🐕 Cuco's Cafe - ¡Contáctanos! 💬</h1>
-        <p><em>"Cuco quiere conocer tu opinión"</em></p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="ubicacion.html">Ubicación</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="page-header">
+        <h1>💬 Contáctanos</h1>
+        <p>"Cuco quiere conocer tu opinión"</p>
+    </div>
 
     <main>
         <section>
-            <article>
-                <h2>📝 Formulario de Contacto</h2>
-                <p>
-                    ¿Tienes una pregunta, sugerencia o comentario? 
-                    Llena el formulario a continuación y Cuco (o alguien del equipo) 
-                    se pondrá en contacto contigo lo antes posible.
-                </p>
+            <p class="intro-text">
+                ¿Tienes una pregunta, sugerencia o comentario? Llena el formulario y Cuco (o alguien del equipo) te responderá ladrando de felicidad.
+            </p>
 
-                <form action="#" method="POST">
-                    <fieldset>
-                        <legend><strong>Tus Datos</strong></legend>
-                        
-                        <label for="nombre">
-                            <strong>Nombre Completo:</strong> <span style="color: red;">*</span>
-                        </label><br>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez"><br><br>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Tus Datos</legend>
+                    
+                    <label for="nombre">Nombre Completo: <span style="color: red;">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
 
-                        <label for="apellido">
-                            <strong>Apellido:</strong> <span style="color: red;">*</span>
-                        </label><br>
-                        <input type="text" id="apellido" name="apellido" required placeholder="Ej: Rodríguez"><br><br>
+                    <label for="apellido">Apellido: <span style="color: red;">*</span></label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ej: Rodríguez">
 
-                        <label for="email">
-                            <strong>Correo Electrónico:</strong> <span style="color: red;">*</span>
-                        </label><br>
-                        <input type="email" id="email" name="email" required placeholder="Ej: juan@example.com"><br><br>
+                    <label for="email">Correo Electrónico: <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Ej: juan@example.com">
 
-                        <label for="telefono">
-                            <strong>Teléfono:</strong>
-                        </label><br>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: (445) 123-4567"><br><br>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: (445) 123-4567">
 
-                        <label for="asunto">
-                            <strong>Asunto:</strong> <span style="color: red;">*</span>
-                        </label><br>
-                        <select id="asunto" name="asunto" required>
-                            <option value="">-- Selecciona un asunto --</option>
-                            <option value="consulta">Consulta general</option>
-                            <option value="sugerencia">Sugerencia de menú</option>
-                            <option value="evento">Evento o catering</option>
-                            <option value="empleado">Solicitud de empleo</option>
-                            <option value="otro">Otro</option>
-                        </select><br><br>
-                    </fieldset>
+                    <label for="asunto">Asunto: <span style="color: red;">*</span></label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">-- Selecciona un asunto --</option>
+                        <option value="consulta">Consulta general</option>
+                        <option value="sugerencia">Sugerencia de menú</option>
+                        <option value="evento">Evento o catering</option>
+                    </select>
+                </fieldset>
 
-                    <fieldset>
-                        <legend><strong>Tu Mensaje</strong></legend>
+                <fieldset>
+                    <legend>Tu Mensaje</legend>
+                    <label for="mensaje">Mensaje: <span style="color: red;">*</span></label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Cuéntanos lo que piensas..."></textarea>
+                </fieldset>
 
-                        <label for="mensaje">
-                            <strong>Mensaje:</strong> <span style="color: red;">*</span>
-                        </label><br>
-                        <textarea 
-                            id="mensaje" 
-                            name="mensaje" 
-                            rows="6" 
-                            cols="50" 
-                            required
-                            placeholder="Cuéntanos lo que piensas... ¡Cuco te escucha!">
-                        </textarea><br><br>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend><strong>Preferencias</strong></legend>
-
-                        <label for="frecuencia">
-                            <strong>¿Cuán seguido visitas Cuco's Cafe?</strong>
-                        </label><br>
-                        <select id="frecuencia" name="frecuencia">
-                            <option value="">-- Selecciona --</option>
-                            <option value="primera_vez">Primera vez</option>
-                            <option value="ocasionalmente">Ocasionalmente</option>
-                            <option value="una_semana">Una o dos veces a la semana</option>
-                            <option value="diaria">Casi diariamente (studentil top 10)</option>
-                        </select><br><br>
-
-                        <strong>¿Deseas recibir promociones y ofertas especiales?</strong><br>
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    <label>¿Deseas recibir promociones?</label>
+                    <div>
                         <input type="radio" id="promo_si" name="promociones" value="si">
-                        <label for="promo_si">Sí, quiero ofertas de Cuco</label><br>
-                        <input type="radio" id="promo_no" name="promociones" value="no">
-                        <label for="promo_no">No, gracias</label><br><br>
+                        <label for="promo_si" style="display:inline; font-weight:normal;">Sí</label>
+                        <input type="radio" id="promo_no" name="promociones" value="no" style="margin-left: 15px;">
+                        <label for="promo_no" style="display:inline; font-weight:normal;">No</label>
+                    </div>
+                    <br>
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos" style="display:inline; font-weight:normal;">Acepto los términos y condiciones</label>
+                </fieldset>
 
-                        <input type="checkbox" id="terminos" name="terminos" required>
-                        <label for="terminos">
-                            Acepto los términos y condiciones y autorizo que Cuco me contacte
-                        </label><br><br>
-                    </fieldset>
-
+                <div style="text-align: center;">
                     <button type="submit">📤 Enviar Mensaje</button>
-                    <button type="reset">🔄 Limpiar Formulario</button>
-                </form>
-
-            </article>
-        </section>
-
-        <section>
-            <h2>📞 Otras Formas de Contacto</h2>
-            <p>Si prefieres contactarnos de manera directa, aquí están nuestras opciones:</p>
-            
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Medio de Contacto</th>
-                        <th>Información</th>
-                        <th>Horario de Respuesta</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>📞 Teléfono</td>
-                        <td>(445) 123-4123</td>
-                        <td>Mismos horarios de apertura</td>
-                    </tr>
-                    <tr>
-                        <td>💬 WhatsApp</td>
-                        <td>(445) 123-4123</td>
-                        <td>Respuesta dentro de 24 horas</td>
-                    </tr>
-                    <tr>
-                        <td>✉️ Email</td>
-                        <td>info@cucoscafe.com</td>
-                        <td>Respuesta dentro de 48 horas</td>
-                    </tr>
-                    <tr>
-                        <td>📱 Facebook</td>
-                        <td>@CucosCafeITSUR</td>
-                        <td>Respuesta dentro de 48 horas</td>
-                    </tr>
-                    <tr>
-                        <td>📸 Instagram</td>
-                        <td>@CucosCafeITSUR</td>
-                        <td>Respuesta dentro de 24 horas</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <button type="reset">🔄 Limpiar</button>
+                </div>
+            </form>
         </section>
 
         <section>
             <h2>❓ Preguntas Frecuentes</h2>
-            <dl>
-                <dt><strong>¿Cuco es amigable con los estudiantes?</strong></dt>
-                <dd>¡Por supuesto! Cuco ama a todos los estudiantes de ITSUR. Solo ten cuidado al pasar cerca de ella porque podría robarte un trozo de tu muffin. 🐕</dd>
-
-                <dt><strong>¿Realizan entregas a domicilio?</strong></dt>
-                <dd>Actualmente no ofrecemos servicio a domicilio, pero puedes hacer pedidos por teléfono para pasar a recoger.</dd>
-
-                <dt><strong>¿Puedo estudiar en Cuco's Cafe todo el día?</strong></dt>
-                <dd>¡Claro que sí! Contamos con Wi-Fi gratis y enchufes disponibles. Solo pedimos que consumas algo mientras estés aquí.</dd>
-
-                <dt><strong>¿Aceptan efectivo y tarjeta?</strong></dt>
-                <dd>Sí, aceptamos ambos métodos de pago. También contamos con transferencias bancarias y billeteras digitales.</dd>
-
-                <dt><strong>¿Qué hace especial a Cuco's Cafe?</strong></dt>
-                <dd>¡Nuestra perrita Cuco! Además de ella, ofrecemos un ambiente acogedor, bebidas de calidad y precios accesibles para estudiantes.</dd>
-            </dl>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>¿Son Pet Friendly?</h3>
+                    <p>¡Sí! Cuco ama a los visitantes.</p>
+                </div>
+                <div class="card">
+                    <h3>¿Aceptan Tarjeta?</h3>
+                    <p>Sí, aceptamos todas las tarjetas y transferencias.</p>
+                </div>
+                <div class="card">
+                    <h3>¿Hay Wi-Fi?</h3>
+                    <p>Totalmente gratis para estudiantes.</p>
+                </div>
+            </div>
         </section>
-
     </main>
 
     <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Ubicación</h3>
+                <p>📍 ITSUR, Uriangato, Guanajuato</p>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <p>📞 (445) 123-4123</p>
+                <p>✉️ info@cucoscafe.com</p>
+            </div>
+        </div>
         <hr>
-        <h3>Contacto</h3>
-        <p>📍 <strong>Ubicación:</strong> Instituto Tecnológico Superior de Uriangato (ITSUR), Uriangato, Guanajuato</p>
-        <p>📞 <strong>Teléfono:</strong> (445) 123-4123</p>
-        <p>✉️ <strong>Email:</strong> info@cucoscafe.com</p>
-        <p><small>© 2026 Cuco's Cafe - Todos los derechos reservados | Hecho con ❤️ y patitas de Cuco 🐕</small></p>
+        <p style="text-align: center; font-size: 0.8rem;">© 2026 Cuco's Cafe</p>
     </footer>
 
 </body>

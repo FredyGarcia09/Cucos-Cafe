@@ -7,28 +7,35 @@
     <title>Menú - Cuco's Cafe</title>
 </head>
 <body>
-    <header>
-        <div class="logo-placeholder">
-            <img src="../Pictures/Logotipo.png" alt="Logo de Cuco's Cafe - Perrita Chihuahua" width="400" height="300">
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <h1>Cuco's Cafe</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html" class="active">Menú</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>🐕 Cuco's Cafe - Nuestro Menú 🐕</h1>
-        <p><em>"Pequeñitas opciones, grandes sabores"</em></p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="ubicacion.html">Ubicación</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="page-header">
+        <h1>📜 Nuestro Menú</h1>
+        <p>"Pequeñitas opciones, grandes sabores"</p>
+    </div>
 
     <main>
+        
         <section>
-            <article>
-                <h2>☕ Bebidas Calientes</h2>
-                <table border="1">
+            <h2>☕ Bebidas Calientes</h2>
+            <div class="table-container">
+                <table>
                     <thead>
                         <tr>
                             <th>Producto</th>
@@ -42,41 +49,35 @@
                             <td>Café Americano</td>
                             <td>Pequeño (8oz)</td>
                             <td>$25</td>
-                            <td>Café puro y simple, como Cuco: sin pretensiones</td>
+                            <td>Café puro y simple</td>
                         </tr>
                         <tr>
                             <td>Café con Leche</td>
                             <td>Mediano (12oz)</td>
                             <td>$35</td>
-                            <td>Mezcla perfecta de café lechero</td>
+                            <td>Mezcla perfecta lechera</td>
                         </tr>
                         <tr>
                             <td>Capuchino</td>
                             <td>Mediano (12oz)</td>
                             <td>$40</td>
-                            <td>Espuma abundante y suave como la peluda de Cuco</td>
+                            <td>Espuma abundante</td>
                         </tr>
                         <tr>
-                            <td>Latte Personalizado</td>
+                            <td>Latte Sabores</td>
                             <td>Grande (16oz)</td>
                             <td>$50</td>
-                            <td>Con sabor a vainilla, caramelo, avellana o chocolate</td>
-                        </tr>
-                        <tr>
-                            <td>Chai Latte</td>
-                            <td>Mediano (12oz)</td>
-                            <td>$45</td>
-                            <td>Bebida especiada y relajante</td>
+                            <td>Vainilla, caramelo o avellana</td>
                         </tr>
                     </tbody>
                 </table>
-            </article>
+            </div>
         </section>
 
         <section>
-            <article>
-                <h2>🧊 Bebidas Frías</h2>
-                <table border="1">
+            <h2>🧊 Bebidas Frías</h2>
+            <div class="table-container">
+                <table>
                     <thead>
                         <tr>
                             <th>Producto</th>
@@ -90,92 +91,74 @@
                             <td>Café Helado</td>
                             <td>Grande (16oz)</td>
                             <td>$30</td>
-                            <td>Refrescante como el jadeo de Cuco en verano</td>
+                            <td>Refrescante para el calor</td>
                         </tr>
                         <tr>
                             <td>Frappuccino</td>
                             <td>Grande (16oz)</td>
                             <td>$45</td>
-                            <td>Bebida congelada con varios sabores</td>
+                            <td>Congelada con sabores</td>
                         </tr>
                         <tr>
-                            <td>Limonada Natural</td>
-                            <td>Grande (16oz)</td>
-                            <td>$25</td>
-                            <td>Fresh y deliciosa, hecha en el momento</td>
-                        </tr>
-                        <tr>
-                            <td>Smoothie de Frutas</td>
+                            <td>Smoothie</td>
                             <td>Grande (16oz)</td>
                             <td>$50</td>
-                            <td>Fresa, mango, plátano o mezcla tropical</td>
+                            <td>Frutas de temporada</td>
                         </tr>
                     </tbody>
                 </table>
-            </article>
+            </div>
         </section>
 
         <section>
-            <article>
-                <h2>🥐 Alimentos</h2>
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Croissant de Chocolate</td>
-                            <td>$30</td>
-                            <td>Crujiente por fuera, suave por dentro</td>
-                        </tr>
-                        <tr>
-                            <td>Muffin Casero</td>
-                            <td>$35</td>
-                            <td>Variedad: chocolate, vainilla o blueberry</td>
-                        </tr>
-                        <tr>
-                            <td>Sandwich de Jamón y Queso</td>
-                            <td>$55</td>
-                            <td>Pan tostado con ingredientes frescos</td>
-                        </tr>
-                        <tr>
-                            <td>Ensalada César</td>
-                            <td>$65</td>
-                            <td>Con lechuga fresca, crutones y aderezo</td>
-                        </tr>
-                        <tr>
-                            <td>Brownie de Nueces</td>
-                            <td>$40</td>
-                            <td>Chocolate intenso, tan adictivo como acariciar a Cuco</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </article>
+            <h2>🥐 Alimentos y Postres</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Croissant Chocolate</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--dusty-pink);">$30</p>
+                    <p>Crujiente y suave</p>
+                </div>
+                <div class="card">
+                    <h3>Muffin Casero</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--dusty-pink);">$35</p>
+                    <p>Chocolate o Vainilla</p>
+                </div>
+                <div class="card">
+                    <h3>Sandwich Clásico</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--dusty-pink);">$55</p>
+                    <p>Jamón y queso fresco</p>
+                </div>
+                <div class="card">
+                    <h3>Brownie</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--dusty-pink);">$40</p>
+                    <p>Chocolate intenso con nuez</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Especiales de la Semana</h2>
-            <ul>
-                <li><strong>Lunes:</strong> 2x1 en Café Americano (solo tamaño pequeño)</li>
-                <li><strong>Miércoles:</strong> Descuento 15% en Smoothies</li>
-                <li><strong>Viernes:</strong> Compra cualquier café y llévate un muffin gratis</li>
-                <li><strong>Fin de semana:</strong> Promoción "Parejas Chihuahua" - Compra 2 bebidas por $80</li>
-            </ul>
+        <section class="hero" style="height: auto; padding: 4rem 2rem; margin-bottom: 0;">
+            <div style="background: rgba(0,0,0,0.6); padding: 2rem; border-radius: 1rem;">
+                <h2>✨ Especiales de la Semana</h2>
+                <ul style="list-style: none; text-align: left; max-width: 600px; margin: 0 auto; color: white;">
+                    <li style="margin-bottom: 1rem;">📅 <strong>Lunes:</strong> 2x1 en Café Americano</li>
+                    <li style="margin-bottom: 1rem;">📅 <strong>Miércoles:</strong> 15% OFF en Smoothies</li>
+                    <li style="margin-bottom: 1rem;">📅 <strong>Viernes:</strong> Muffin Gratis en compra de café grande</li>
+                </ul>
+            </div>
         </section>
 
     </main>
 
     <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Contacto</h3>
+                <p>📍 ITSUR, Uriangato, Guanajuato</p>
+                <p>✉️ info@cucoscafe.com</p>
+            </div>
+        </div>
         <hr>
-        <h3>Contacto</h3>
-        <p>📍 <strong>Ubicación:</strong> Instituto Tecnológico Superior de Uriangato (ITSUR), Uriangato, Guanajuato</p>
-        <p>📞 <strong>Teléfono:</strong> (445) 123-4123</p>
-        <p>✉️ <strong>Email:</strong> info@cucoscafe.com</p>
-        <p><small>© 2026 Cuco's Cafe - Todos los derechos reservados | Hecho con ❤️ y patitas de Cuco 🐕</small></p>
+        <p style="text-align: center;">© 2026 Cuco's Cafe</p>
     </footer>
 
 </body>

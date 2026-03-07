@@ -7,112 +7,146 @@
     <title>Cuco's Cafe - Cafetería</title>
 </head>
 <body>
-    <header>
-        <div class="logo-placeholder">
-            <img src="../Pictures/Logotipo.png" alt="Logo de Cuco's Cafe - Perrita Chihuahua" width="400" height="300">
+    
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <h1>Cuco's Cafe</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>🐕 Cuco's Cafe 🐕</h1>
-        <p><em>"Pequeña, pero con grandes sabores"</em></p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="ubicacion.html">Ubicación</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🐕 Cuco's Cafe 🐕</h1>
+            <p>"Pequeña, pero con grandes sabores"</p>
+        </div>
+    </section>
 
     <main>
         <section>
             <article>
                 <h2>Bienvenido a Cuco's Cafe ☕</h2>
-                <p>
-                    Somos la cafetería favorita de los estudiantes y profesionales en 
-                    <strong>ITSUR Uriangato</strong>. Aquí encontrarás las mejores bebidas y alimentos, 
-                    servidos con el cuidado de una mascota chihuahua: pequeñitas porciones 
-                    pero con gran corazón.
-                </p>
-                <p>
-                    Fundada con la misión de brindarte un espacio acogedor donde puedas estudiar, 
-                    trabajar o simplemente disfrutar de nuestros exquisitos productos. 
-                    ¡Cuco, nuestra perrita inspiración, te está esperando!
-                </p>
+                <div class="intro-text">
+                    <p>Somos la cafetería favorita de los estudiantes y profesionales en <strong>ITSUR Uriangato</strong>. Aquí encontrarás las mejores bebidas y alimentos, servidos con el cuidado de una mascota chihuahua: pequeñitas porciones pero con gran corazón.</p>
+                    <br>
+                    <p>Fundada con la misión de brindarte un espacio acogedor donde puedas estudiar, trabajar o simplemente disfrutar de nuestros exquisitos productos. ¡Cuco, nuestra perrita inspiración, te está esperando!</p>
+                </div>
             </article>
 
-            <article>
-                <h2>¿Por qué elegir Cuco's Cafe?</h2>
-                <ul>
-                    <li>Ubicación privilegiada en ITSUR Uriangato</li>
-                    <li>Bebidas de calidad premium</li>
-                    <li>Ambiente acogedor y tranquilo</li>
-                    <li>Wi-Fi gratis para estudiantes</li>
-                    <li>Atendido con el amor de Cuco 🐕💕</li>
-                    <li>Precios accesibles para el bolsillo estudiantil</li>
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <span class="card-icon">📍</span>
+                    <h3>Ubicación ITSUR</h3>
+                    <p>Ideal para estudiantes</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">☕</span>
+                    <h3>Calidad Premium</h3>
+                    <p>Bebidas seleccionadas</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🌿</span>
+                    <h3>Ambiente</h3>
+                    <p>Acogedor y tranquilo</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📶</span>
+                    <h3>Wi-Fi Gratis</h3>
+                    <p>Para tus tareas</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🐶</span>
+                    <h3>Amor de Cuco</h3>
+                    <p>Atención con cariño</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💰</span>
+                    <h3>Precios Bajos</h3>
+                    <p>Para el estudiante</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-container" style="grid-template-columns: 1fr 1fr;">
+            <div>
+                <h2>Horarios de Atención</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Apertura</th>
+                                <th>Cierre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes a Viernes</td>
+                                <td>07:00 AM</td>
+                                <td>08:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sábado</td>
+                                <td>08:00 AM</td>
+                                <td>06:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Domingo</td>
+                                <td>09:00 AM</td>
+                                <td>05:00 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h2>Nuestros Servicios</h2>
+                <ul class="styled-list">
+                    <li>Bebidas calientes premium</li>
+                    <li>Bebidas frías refrescantes</li>
+                    <li>Alimentos ligeros y desayunos</li>
+                    <li>Postres deliciosos</li>
+                    <li>Servicio de catering estudiantil</li>
                 </ul>
-            </article>
+            </div>
         </section>
 
-        <section>
-            <h2>Horarios de Atención</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Día</th>
-                        <th>Horario de Apertura</th>
-                        <th>Horario de Cierre</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lunes a Viernes</td>
-                        <td>07:00 AM</td>
-                        <td>08:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>08:00 AM</td>
-                        <td>06:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Domingo</td>
-                        <td>09:00 AM</td>
-                        <td>05:00 PM</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <ol>
-                <li>Bebidas calientes premium (café, capuchino, latte)</li>
-                <li>Bebidas frías refrescantes</li>
-                <li>Alimentos ligeros y desayunos</li>
-                <li>Postres deliciosos</li>
-                <li>Servicio de catering para eventos estudiantiles</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>¡Síguenos en redes sociales!</h2>
-            <p>
-                Conéctate con nosotros:
-                <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
-                <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
-                <a href="https://www.twitter.com" target="_blank">Twitter</a>
-            </p>
+        <section style="text-align: center; margin-top: 3rem;">
+            <h2>¡Síguenos!</h2>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </div>
         </section>
     </main>
 
     <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Ubicación</h3>
+                <p>📍 ITSUR, Uriangato, Guanajuato</p>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <p>📞 (445) 123-4123</p>
+                <p>✉️ info@cucoscafe.com</p>
+            </div>
+        </div>
         <hr>
-        <h3>Contacto</h3>
-        <p>📍 <strong>Ubicación:</strong> Instituto Tecnológico Superior de Uriangato (ITSUR), Uriangato, Guanajuato</p>
-        <p>📞 <strong>Teléfono:</strong> (445) 123-4123</p>
-        <p>✉️ <strong>Email:</strong> info@cucoscafe.com</p>
-        <p><small>© 2026 Cuco's Cafe - Todos los derechos reservados | Hecho con ❤️ y patitas de Cuco 🐕</small></p>
+        <p style="text-align: center; font-size: 0.8rem;">© 2026 Cuco's Cafe - Hecho con ❤️ y patitas de Cuco 🐾</p>
     </footer>
 
 </body>
