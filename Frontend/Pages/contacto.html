@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos.css">
+    <script src="../Scripts/Sistema.js"></script>
     <title>Contacto - Cuco's Cafe</title>
 </head>
 <body>
@@ -36,49 +37,32 @@
                 ¿Tienes una pregunta, sugerencia o comentario? Llena el formulario y Cuco (o alguien del equipo) te responderá ladrando de felicidad.
             </p>
 
-            <form action="#" method="POST">
+            <form onsubmit="procesarFormularioContacto(event)">
                 <fieldset>
                     <legend>Tus Datos</legend>
                     
                     <label for="nombre">Nombre Completo: <span style="color: red;">*</span></label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
-
-                    <label for="apellido">Apellido: <span style="color: red;">*</span></label>
-                    <input type="text" id="apellido" name="apellido" required placeholder="Ej: Rodríguez">
+                    <input type="text" id="nombre" required placeholder="Ej: Juan Pérez">
 
                     <label for="email">Correo Electrónico: <span style="color: red;">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="Ej: juan@example.com">
+                    <input type="email" id="email" required placeholder="Ej: juan@example.com">
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: (445) 123-4567">
+                    <input type="tel" id="telefono" placeholder="Ej: (445) 123-4567">
 
                     <label for="asunto">Asunto: <span style="color: red;">*</span></label>
-                    <select id="asunto" name="asunto" required>
+                    <select id="asunto" required>
                         <option value="">-- Selecciona un asunto --</option>
-                        <option value="consulta">Consulta general</option>
-                        <option value="sugerencia">Sugerencia de menú</option>
-                        <option value="evento">Evento o catering</option>
+                        <option value="Consulta">Consulta general</option>
+                        <option value="Sugerencia">Sugerencia de menú</option>
+                        <option value="Evento">Evento o catering</option>
                     </select>
                 </fieldset>
 
                 <fieldset>
                     <legend>Tu Mensaje</legend>
                     <label for="mensaje">Mensaje: <span style="color: red;">*</span></label>
-                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Cuéntanos lo que piensas..."></textarea>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Preferencias</legend>
-                    <label>¿Deseas recibir promociones?</label>
-                    <div>
-                        <input type="radio" id="promo_si" name="promociones" value="si">
-                        <label for="promo_si" style="display:inline; font-weight:normal;">Sí</label>
-                        <input type="radio" id="promo_no" name="promociones" value="no" style="margin-left: 15px;">
-                        <label for="promo_no" style="display:inline; font-weight:normal;">No</label>
-                    </div>
-                    <br>
-                    <input type="checkbox" id="terminos" name="terminos" required>
-                    <label for="terminos" style="display:inline; font-weight:normal;">Acepto los términos y condiciones</label>
+                    <textarea id="mensaje" rows="6" required placeholder="Cuéntanos lo que piensas..."></textarea>
                 </fieldset>
 
                 <div style="text-align: center;">
@@ -88,22 +72,11 @@
             </form>
         </section>
 
-        <section>
-            <h2>❓ Preguntas Frecuentes</h2>
-            <div class="grid-container">
-                <div class="card">
-                    <h3>¿Son Pet Friendly?</h3>
-                    <p>¡Sí! Cuco ama a los visitantes.</p>
-                </div>
-                <div class="card">
-                    <h3>¿Aceptan Tarjeta?</h3>
-                    <p>Sí, aceptamos todas las tarjetas y transferencias.</p>
-                </div>
-                <div class="card">
-                    <h3>¿Hay Wi-Fi?</h3>
-                    <p>Totalmente gratis para estudiantes.</p>
-                </div>
-            </div>
+        <section style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px dashed var(--coffee-light);">
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Área exclusiva para personal</p>
+            <a href="login.html" style="text-decoration: none; font-weight: bold; color: var(--coffee); border-bottom: 1px solid var(--coffee);">
+                🔐 Ingresar al Sistema Admin
+            </a>
         </section>
     </main>
 
@@ -120,7 +93,7 @@
             </div>
         </div>
         <hr>
-        <p style="text-align: center; font-size: 0.8rem;">© 2026 Cuco's Cafe</p>
+        <p style="text-align: center; font-size: 0.8rem;">© 2026 Cuco's Cafe - Hecho con ❤️ y patitas de Cuco 🐾</p>
     </footer>
 
 </body>

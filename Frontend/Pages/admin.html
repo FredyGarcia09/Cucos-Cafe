@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Cuco's Cafe</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <script src="../Scripts/Sistema.js"></script>
+</head>
+<body onload="cargarAdminPanel()">
+
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <h1>Cuco's Admin</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><span style="font-weight: bold; color: var(--coffee);">Hola, <span id="admin-name">Admin</span> 👋</span></li>
+                    <li><button onclick="cerrarSesion()" class="btn-delete" style="margin-left: 15px;">Cerrar Sesión</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>⚙️ Panel de Control</h1>
+        <p>"Gestiona los mensajes de tus clientes"</p>
+    </div>
+
+    <main>
+        <section>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h2 style="text-align: left; margin: 0;">Bandeja de Entrada</h2>
+                    <p style="color: #666;">Mensajes recibidos desde el formulario web</p>
+                </div>
+                
+                <button onclick="descargarXML()" class="btn-admin-action">
+                    💾 Descargar Respaldo XML
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Asunto</th>
+                            <th>Mensaje</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla">
+                        <tr>
+                            <td colspan="5" style="text-align: center; padding: 3rem; color: #666;">
+                                Cargando datos del sistema...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #888; font-style: italic;">
+                Nota: Los cambios se guardan automáticamente en este navegador. <br>
+                Usa "Descargar Respaldo" para llevarte el archivo XML actualizado.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content" style="display: flex; justify-content: center;">
+            <p>Sistema de Gestión Interna - Cuco's Cafe 2026 🐕</p>
+        </div>
+    </footer>
+
+</body>
+</html>

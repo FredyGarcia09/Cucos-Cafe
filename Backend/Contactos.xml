@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contactos>
+    <mensaje>
+        <id>1</id>
+        <nombre>Juan Cliente</nombre>
+        <email>juan@gmail.com</email>
+        <asunto>Felicitación</asunto>
+        <texto>El café estaba delicioso.</texto>
+    </mensaje>
+    <mensaje>
+        <id>2</id>
+        <nombre>Maria Estudiante</nombre>
+        <email>maria@itsur.edu.mx</email>
+        <asunto>Queja</asunto>
+        <texto>El internet estaba lento hoy.</texto>
+    </mensaje>
+</contactos>
