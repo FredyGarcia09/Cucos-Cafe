@@ -1,9 +1,4 @@
-/* =========================================
-   SISTEMA INTEGRAL: CONTACTO <-> ADMIN
-   Usa LocalStorage para simular una Base de Datos real
-   ========================================= */
-
-// DATOS INICIALES (Semilla)
+// DATOS INICIALES
 const XML_INICIAL = `<?xml version="1.0" encoding="UTF-8"?>
 <contactos>
     <mensaje>
@@ -20,7 +15,7 @@ const ADMIN_XML = `<?xml version="1.0" encoding="UTF-8"?>
     <admin><usuario>cuco</usuario><password>1234</password></admin>
 </admins>`;
 
-// --- LÓGICA COMÚN: MANEJO DE "BASE DE DATOS" ---
+// LÓGICA COMÚN: MANEJO DE "BASE DE DATOS" 
 function obtenerBD() {
     let db = localStorage.getItem("cucos_db_xml");
     if (!db) {
@@ -37,24 +32,24 @@ function guardarBD(xmlDoc) {
     localStorage.setItem("cucos_db_xml", xmlString);
 }
 
-// --- LÓGICA DE LA PÁGINA DE CONTACTO ---
+// LÓGICA DE LA PÁGINA DE CONTACTO
 // Esta función se activará cuando envíes el formulario
 function procesarFormularioContacto(event) {
-    event.preventDefault(); // DETIENE EL ERROR 405 (No recarga la página)
+    event.preventDefault(); // DETIENE EL ERROR 405
 
-    // 1. Obtener datos del HTML
+    // Obtener datos del HTML
     const nombre = document.getElementById("nombre").value;
     const email = document.getElementById("email").value;
     const asunto = document.getElementById("asunto").value;
     const mensaje = document.getElementById("mensaje").value;
 
-    // 2. Leer la "Base de Datos" actual
+    // Leer la "Base de Datos" actual
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(obtenerBD(), "text/xml");
 
-    // 3. Crear el nuevo nodo XML
+    // Crear el nuevo nodo XML
     const nuevoNodo = xmlDoc.createElement("mensaje");
-    const id = Date.now(); // Usamos la fecha como ID único
+    const id = Date.now(); // Usamos la fecha como ID
 
     crearElemento(xmlDoc, nuevoNodo, "id", id);
     crearElemento(xmlDoc, nuevoNodo, "nombre", nombre);
@@ -62,16 +57,16 @@ function procesarFormularioContacto(event) {
     crearElemento(xmlDoc, nuevoNodo, "asunto", asunto);
     crearElemento(xmlDoc, nuevoNodo, "texto", mensaje);
 
-    // 4. Insertarlo y Guardar
+    // Insertarlo y Guardar
     xmlDoc.getElementsByTagName("contactos")[0].appendChild(nuevoNodo);
     guardarBD(xmlDoc);
 
-    // 5. Feedback al usuario
+    // Feedback al usuario
     alert("¡Mensaje enviado! Cuco lo ha recibido 🐶");
-    document.querySelector("form").reset(); // Limpia el formulario
+    document.querySelector("form").reset(); // Limpia formulario
 }
 
-// --- LÓGICA DEL ADMIN (Login y Dashboard) ---
+// LÓGICA DEL ADMIN (Login y Dashboard)
 function validarLogin() {
     const u = document.getElementById("usuario").value;
     const p = document.getElementById("password").value;
