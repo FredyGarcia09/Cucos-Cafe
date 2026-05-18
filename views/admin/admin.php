@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Admin - Cuco's Cafe</title>
-    <link rel="stylesheet" href="../estilos.css">
-    <script src="../Scripts/Sistema.js"></script>
+    <link rel="stylesheet" href="../../assets/estilos.css">
+    <script src="../../Scripts/Sistema.js"></script>
 </head>
 <body onload="cargarAdminPanel()">
 
     <header class="main-header">
         <div class="nav-container">
             <div class="brand">
-                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <img src="../../assets/Pictures/Logotipo.png" alt="Logo" class="logo">
                 <h1>Cuco's Admin</h1>
             </div>
             <nav>
                 <ul>
                     <li><span style="font-weight: bold; color: var(--coffee);">Hola, <span id="admin-name">Admin</span> 👋</span></li>
-                    <li><button onclick="cerrarSesion()" class="btn-delete" style="margin-left: 15px;">Cerrar Sesión</button></li>
+                    <li><button onclick="window.location.href='login.php'" class="btn-delete" style="margin-left: 15px; cursor: pointer;">Cerrar Sesión</button></li>
                 </ul>
             </nav>
         </div>
@@ -37,9 +37,15 @@
                     <p style="color: #666;">Mensajes recibidos desde el formulario web</p>
                 </div>
                 
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="menu_admin.php" class="btn-primary" style="text-decoration:none; padding: 10px 20px;">
+                    🍔 Gestionar Menú
+                </a>
+    
                 <button onclick="descargarXML()" class="btn-admin-action">
                     💾 Descargar Respaldo XML
                 </button>
+            </div>
             </div>
 
             <div class="table-container">

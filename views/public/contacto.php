@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../../assets/estilos.css">
     <script src="../Scripts/Sistema.js"></script>
     <title>Contacto - Cuco's Cafe</title>
 </head>
@@ -12,15 +12,15 @@
     <header class="main-header">
         <div class="nav-container">
             <a href="index.html" class="brand">
-                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <img src="../../assets/Pictures/Logotipo.png" alt="Logo" class="logo">
                 <h1>Cuco's Cafe</h1>
             </a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="menu.html">Menú</a></li>
-                    <li><a href="ubicacion.html">Ubicación</a></li>
-                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="menu.php">Menú</a></li>
+                    <li><a href="ubicacion.php">Ubicación</a></li>
+                    <li><a href="contacto.php" class="active">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,7 +74,7 @@
 
         <section style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px dashed var(--coffee-light);">
             <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Área exclusiva para personal</p>
-            <a href="login.html" style="text-decoration: none; font-weight: bold; color: var(--coffee); border-bottom: 1px solid var(--coffee);">
+            <a href="../admin/login.php" style="text-decoration: none; font-weight: bold; color: var(--coffee); border-bottom: 1px solid var(--coffee);">
                 🔐 Ingresar al Sistema Admin
             </a>
         </section>

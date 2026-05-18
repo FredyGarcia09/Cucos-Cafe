@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <platillo>
+        <id>1</id>
+        <nombre>Café Americano</nombre>
+        <tamano>Pequeño (8oz)</tamano>
+        <precio>25</precio>
+        <descripcion>Café puro y simple</descripcion>
+        <categoria>Bebidas Calientes</categoria>
+    </platillo>
+    <platillo>
+        <id>2</id>
+        <nombre>Frappuccino</nombre>
+        <tamano>Grande (16oz)</tamano>
+        <precio>45</precio>
+        <descripcion>Congelada con sabores</descripcion>
+        <categoria>Bebidas Frías</categoria>
+    </platillo>
+<platillo><id>6a0a821a09c64</id><nombre>Frappe Galleta Oreo</nombre><tamano>Grande (16oz)</tamano><precio>55</precio><descripcion>Contiene trozos de galleta oreo y chocolate alrededor del vaso.</descripcion><categoria>Bebidas Frías</categoria></platillo></menu>

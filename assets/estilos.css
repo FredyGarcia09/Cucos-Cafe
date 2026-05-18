@@ -103,7 +103,7 @@ nav ul li a.active {
     */
 .hero {
     background: linear-gradient(rgba(75, 54, 33, 0.7), rgba(75, 54, 33, 0.7)), 
-                url('../Frontend/Pictures/PortadaCafe.avif');
+                url('/cucos_cafe/assets/Pictures/PortadaCafe.avif');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -446,7 +446,7 @@ footer hr {
  /* Página de Login */
 .bg-login {
     background: linear-gradient(rgba(75, 54, 33, 0.8), rgba(75, 54, 33, 0.9)), 
-                url('../Frontend/Pictures/PreparaCafe-Fondo.avif');
+                url('Pictures/PreparaCafe-Fondo.avif');
     background-size: cover;
     background-position: center;
     min-height: 100vh;

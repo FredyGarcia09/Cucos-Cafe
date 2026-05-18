@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso Staff - Cuco's Cafe</title>
-    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../../assets/estilos.css">
     <script src="../Scripts/Sistema.js"></script> 
 </head>
 <body class="bg-login">
 
     <div class="login-card">
         <div class="login-header">
-            <img src="../Pictures/Logotipo.png" alt="Cuco Logo">
+            <img src="../../assets/Pictures/Logotipo.png" alt="Cuco Logo" style="max-width: 150px; margin-bottom: 1rem;">
             <h2 style="color: var(--coffee); margin-bottom: 0.5rem;">Bienvenido de nuevo</h2>
             <p style="color: #666; font-size: 0.9rem;">Portal Administrativo Cuco's Cafe</p>
         </div>
 
-        <form onsubmit="event.preventDefault(); validarLogin();">
+        <form action="admin.php" method="GET">
             <div style="text-align: left; margin-bottom: 1.5rem;">
                 <label for="usuario" style="font-size: 0.9rem; margin-bottom: 5px;">Usuario ID</label>
                 <input type="text" id="usuario" name="usuario" placeholder="Ej. cuco" required 
@@ -35,7 +35,7 @@
         </form>
 
         <div style="margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1rem;">
-            <a href="index.html" style="text-decoration: none; color: #888; font-size: 0.85rem;">
+            <a href="../public/index.php" style="text-decoration: none; color: #888; font-size: 0.85rem;">
                 ← Volver al sitio web
             </a>
         </div>

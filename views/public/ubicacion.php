@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../../assets/estilos.css">
     <title>Ubicación - Cuco's Cafe</title>
 </head>
 <body>
@@ -11,15 +11,15 @@
     <header class="main-header">
         <div class="nav-container">
             <a href="index.html" class="brand">
-                <img src="../Pictures/Logotipo.png" alt="Logo" class="logo">
+                <img src="../../assets/Pictures/Logotipo.png" alt="Logo" class="logo">
                 <h1>Cuco's Cafe</h1>
             </a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="menu.html">Menú</a></li>
-                    <li><a href="ubicacion.html" class="active">Ubicación</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="menu.php">Menú</a></li>
+                    <li><a href="ubicacion.php" class="active">Ubicación</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
         </div>
