@@ -6,12 +6,12 @@ class MenuModel {
     public function __construct() {
         try {
             // Rúbrica: Conexión segura usando PDO a MySQL (XAMPP usa usuario 'root' y contraseña vacía)
-            $this->conexion = new PDO("mysql:host=localhost;dbname=cucos_cafe;charset=utf8", "root", "");
+            $this->conexion = new PDO("mysql:host=localhost;dbname=cucos_cafe;charset=utf8", "root", "root");
             // Configurar para que lance excepciones en caso de fallos técnicos
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            // Rúbrica: Manejo básico de errores amigables si el servidor MySQL está apagado
-            throw new Exception("Error temporal en el sistema: No se pudo conectar a la base de datos.");
+            // Esto nos dirá exactamente por qué MySQL está rechazando la conexión
+            throw new Exception("ERROR REAL DE MYSQL: " . $e->getMessage());
         }
     }
 

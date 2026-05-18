@@ -103,7 +103,7 @@ nav ul li a.active {
     */
 .hero {
     background: linear-gradient(rgba(75, 54, 33, 0.7), rgba(75, 54, 33, 0.7)), 
-                url('/cucos_cafe/assets/Pictures/PortadaCafe.avif');
+                url('../assets/Pictures/PortadaCafe.avif');
     background-size: cover;
     background-position: center;
     height: 60vh;

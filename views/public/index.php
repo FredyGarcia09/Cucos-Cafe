@@ -16,7 +16,7 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="index.php" class="active">Inicio</a></li>
                     <li><a href="menu.php">Menú</a></li>
                     <li><a href="ubicacion.php">Ubicación</a></li>
                     <li><a href="contacto.php">Contacto</a></li>

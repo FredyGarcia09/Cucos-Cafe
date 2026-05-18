@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso Staff - Cuco's Cafe</title>
     <link rel="stylesheet" href="../../assets/estilos.css">
-    <script src="../Scripts/Sistema.js"></script> 
-</head>
+    </head>
 <body class="bg-login">
 
     <div class="login-card">
@@ -16,7 +15,9 @@
             <p style="color: #666; font-size: 0.9rem;">Portal Administrativo Cuco's Cafe</p>
         </div>
 
-        <form action="admin.php" method="GET">
+        <form action="../../controllers/ContactoController.php" method="POST">
+            <input type="hidden" name="accion" value="login">
+
             <div style="text-align: left; margin-bottom: 1.5rem;">
                 <label for="usuario" style="font-size: 0.9rem; margin-bottom: 5px;">Usuario ID</label>
                 <input type="text" id="usuario" name="usuario" placeholder="Ej. cuco" required 
@@ -29,7 +30,7 @@
                        style="background: #f9f9f9; padding: 15px;">
             </div>
 
-            <button type="submit" id="btn-ingresar" class="btn-primary" style="width: 100%; justify-content: center; padding: 15px;">
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 15px;">
                 🔐 Iniciar Sesión Segura
             </button>
         </form>

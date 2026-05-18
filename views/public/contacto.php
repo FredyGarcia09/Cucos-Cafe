@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/estilos.css">
-    <script src="../Scripts/Sistema.js"></script>
     <title>Contacto - Cuco's Cafe</title>
 </head>
 <body>
 
     <header class="main-header">
         <div class="nav-container">
-            <a href="index.html" class="brand">
+            <a href="index.php" class="brand">
                 <img src="../../assets/Pictures/Logotipo.png" alt="Logo" class="logo">
                 <h1>Cuco's Cafe</h1>
             </a>
@@ -37,21 +36,24 @@
                 ¿Tienes una pregunta, sugerencia o comentario? Llena el formulario y Cuco (o alguien del equipo) te responderá ladrando de felicidad.
             </p>
 
-            <form onsubmit="procesarFormularioContacto(event)">
+            <form action="../../controllers/ContactoController.php" method="POST">
+                
+                <input type="hidden" name="accion" value="nuevo_mensaje">
+
                 <fieldset>
                     <legend>Tus Datos</legend>
                     
                     <label for="nombre">Nombre Completo: <span style="color: red;">*</span></label>
-                    <input type="text" id="nombre" required placeholder="Ej: Juan Pérez">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
 
                     <label for="email">Correo Electrónico: <span style="color: red;">*</span></label>
-                    <input type="email" id="email" required placeholder="Ej: juan@example.com">
+                    <input type="email" id="email" name="email" required placeholder="Ej: juan@example.com">
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" placeholder="Ej: (445) 123-4567">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: (445) 123-4567">
 
                     <label for="asunto">Asunto: <span style="color: red;">*</span></label>
-                    <select id="asunto" required>
+                    <select id="asunto" name="asunto" required>
                         <option value="">-- Selecciona un asunto --</option>
                         <option value="Consulta">Consulta general</option>
                         <option value="Sugerencia">Sugerencia de menú</option>
@@ -62,7 +64,7 @@
                 <fieldset>
                     <legend>Tu Mensaje</legend>
                     <label for="mensaje">Mensaje: <span style="color: red;">*</span></label>
-                    <textarea id="mensaje" rows="6" required placeholder="Cuéntanos lo que piensas..."></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Cuéntanos lo que piensas..."></textarea>
                 </fieldset>
 
                 <div style="text-align: center;">
