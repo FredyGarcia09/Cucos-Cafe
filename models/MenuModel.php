@@ -1,83 +1,77 @@
 <?php
-// Modelo encargado de gestionar las operaciones CRUD en el archivo menu.xml
+// Modelo encargado de gestionar las operaciones CRUD en la base de datos MySQL
 class MenuModel {
-    // Definición de la ruta física del archivo XML usando la constante de directorio actual
-    private $rutaXML = __DIR__ . '/../data/menu.xml';
+    private $conexion;
 
-    // (R) READ: Leer todos los platillos del menú
+    public function __construct() {
+        try {
+            // Rúbrica: Conexión segura usando PDO a MySQL (XAMPP usa usuario 'root' y contraseña vacía)
+            $this->conexion = new PDO("mysql:host=localhost;dbname=cucos_cafe;charset=utf8", "root", "");
+            // Configurar para que lance excepciones en caso de fallos técnicos
+            $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            // Rúbrica: Manejo básico de errores amigables si el servidor MySQL está apagado
+            throw new Exception("Error temporal en el sistema: No se pudo conectar a la base de datos.");
+        }
+    }
+
+    // (R) READ: Consultar todos los registros de la tabla menu
     public function obtenerPlatillos() {
         try {
-            // Verificamos si el archivo existe antes de abrirlo
-            if (!file_exists($this->rutaXML)) {
-                throw new Exception("Error temporal en el sistema de menú: Archivo no encontrado.");
-            }
-            
-            // simplexml_load_file carga el XML como un objeto manejable
-            $xml = simplexml_load_file($this->rutaXML);
-            
-            if ($xml === false) {
-                throw new Exception("Error temporal en el sistema de menú: Archivo corrupto o sin permisos.");
-            }
-            
-            return $xml;
-            
-        } catch (Exception $e) {
-            // Retorna el mensaje amigable de error si algo falla
-            return $e->getMessage(); 
+            $sql = "SELECT * FROM menu";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            // Retornamos como objetos FETCH_OBJ para no romper la sintaxis de tus vistas ($item->nombre)
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            return "Error temporal en el sistema: No se pudieron cargar los productos del menú.";
         }
     }
 
-    // (C) CREATE: Agregar un nuevo platillo al XML
+    // (C) CREATE: Insertar un nuevo platillo/bebida
     public function agregarPlatillo($datos) {
-        $xml = simplexml_load_file($this->rutaXML);
-        
-        // Creamos un nuevo "nodo" hijo llamado platillo
-        $nuevoPlatillo = $xml->addChild('platillo');
-        $nuevoPlatillo->addChild('id', uniqid()); // Genera un ID único para el producto
-        $nuevoPlatillo->addChild('nombre', htmlspecialchars($datos['nombre']));
-        $nuevoPlatillo->addChild('tamano', htmlspecialchars($datos['tamano']));
-        $nuevoPlatillo->addChild('precio', htmlspecialchars($datos['precio']));
-        $nuevoPlatillo->addChild('descripcion', htmlspecialchars($datos['descripcion']));
-        $nuevoPlatillo->addChild('categoria', htmlspecialchars($datos['categoria']));
-
-        // Guardamos los cambios sobreescribiendo el archivo XML
-        $xml->asXML($this->rutaXML);
+        try {
+            $sql = "INSERT INTO menu (nombre, categoria, tamano, precio, descripcion) VALUES (:nombre, :categoria, :tamano, :precio, :descripcion)";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute([
+                ':nombre'      => htmlspecialchars($datos['nombre']),
+                ':categoria'   => htmlspecialchars($datos['categoria']),
+                ':tamano'      => htmlspecialchars($datos['tamano']),
+                ':precio'      => htmlspecialchars($datos['precio']),
+                ':descripcion' => htmlspecialchars($datos['descripcion'])
+            ]);
+        } catch (PDOException $e) {
+            throw new Exception("Error del sistema: No se pudo registrar el nuevo platillo.");
+        }
     }
 
-    // (U) UPDATE: Modificar los valores de un platillo existente
+    // (U) UPDATE: Actualizar precio, descripción u otros campos de un ID existente
     public function actualizarPlatillo($datos) {
-        $xml = simplexml_load_file($this->rutaXML);
-        
-        // Buscamos el nodo correspondiente por medio de su ID único
-        foreach ($xml->platillo as $platillo) {
-            if ((string)$platillo->id === $datos['id']) {
-                // Modificamos las propiedades con los nuevos valores sanitizados
-                $platillo->nombre = htmlspecialchars($datos['nombre']);
-                $platillo->tamano = htmlspecialchars($datos['tamano']);
-                $platillo->precio = htmlspecialchars($datos['precio']);
-                $platillo->descripcion = htmlspecialchars($datos['descripcion']);
-                $platillo->categoria = htmlspecialchars($datos['categoria']);
-                break;
-            }
+        try {
+            $sql = "UPDATE menu SET nombre = :nombre, categoria = :categoria, tamano = :tamano, precio = :precio, descripcion = :descripcion WHERE id = :id";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute([
+                ':id'          => htmlspecialchars($datos['id']),
+                ':nombre'      => htmlspecialchars($datos['nombre']),
+                ':categoria'   => htmlspecialchars($datos['categoria']),
+                ':tamano'      => htmlspecialchars($datos['tamano']),
+                ':precio'      => htmlspecialchars($datos['precio']),
+                ':descripcion' => htmlspecialchars($datos['descripcion'])
+            ]);
+        } catch (PDOException $e) {
+            throw new Exception("Error del sistema: No se pudieron guardar los cambios del platillo.");
         }
-        // Consolidamos los cambios en el archivo físico
-        $xml->asXML($this->rutaXML);
     }
 
-    // (D) DELETE: Eliminar un platillo por su ID
+    // (D) DELETE: Eliminar permanentemente un platillo por su ID
     public function eliminarPlatillo($id) {
-        $xml = simplexml_load_file($this->rutaXML);
-        $index = 0;
-        
-        // Buscamos el platillo que coincida con el ID para removerlo del arreglo
-        foreach ($xml->platillo as $platillo) {
-            if ((string)$platillo->id === $id) {
-                unset($xml->platillo[$index]); // Elimina el nodo del árbol XML
-                break;
-            }
-            $index++;
+        try {
+            $sql = "DELETE FROM menu WHERE id = :id";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute([':id' => $id]);
+        } catch (PDOException $e) {
+            throw new Exception("Error del sistema: No se pudo eliminar el platillo seleccionado.");
         }
-        $xml->asXML($this->rutaXML);
     }
 }
 ?>

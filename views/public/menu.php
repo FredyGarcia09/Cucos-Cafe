@@ -61,7 +61,7 @@ $menuData = $controlador->mostrarMenu();
                     <tbody>
                         <?php 
                         // Ciclo para imprimir cada platillo del XML en tu diseño HTML
-                        foreach ($menuData->platillo as $item) { 
+                        foreach ($menuData as $item) {
                         ?>
                         <tr>
                             <td><?php echo $item->nombre; ?></td>

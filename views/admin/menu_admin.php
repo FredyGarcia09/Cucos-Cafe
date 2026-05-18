@@ -10,10 +10,11 @@ $controlador->procesarFormularioAdmin();
 $menuData = $controlador->mostrarMenu();
 
 // Mecanismo interactivo para precargar datos en caso de que se solicite una edición (GET)
+// Mecanismo interactivo para precargar datos en caso de que se solicite una edición (GET)
 $platilloAEditar = null;
 if (isset($_GET['editar_id']) && !is_string($menuData)) {
-    foreach ($menuData->platillo as $item) {
-        if ((string)$item->id === $_GET['editar_id']) {
+    foreach ($menuData as $item) {
+        if ($item->id == $_GET['editar_id']) {
             $platilloAEditar = $item;
             break;
         }
@@ -116,7 +117,7 @@ if (isset($_GET['editar_id']) && !is_string($menuData)) {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($menuData->platillo as $item): ?>
+                            <?php foreach ($menuData as $item): ?>
                             <tr>
                                 <td><strong><?php echo $item->nombre; ?></strong></td>
                                 <td><?php echo $item->categoria; ?></td>
